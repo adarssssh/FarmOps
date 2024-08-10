@@ -1,0 +1,26 @@
+<!-- templates/view_recommendation.html -->
+
+<h2>Soil Test ID: {{ soil_test.id }}</h2>
+<p>pH Level: {{ soil_test.ph }}</p>
+<p>Nitrogen: {{ soil_test.nitrogen }}</p>
+<p>Phosphorus: {{ soil_test.phosphorus }}</p>
+<p>Potassium: {{ soil_test.potassium }}</p>
+<p>Organic Matter: {{ soil_test.organic_matter }}</p>
+<p>Soil Type: {{ soil_test.soil_type }}</p>
+
+<h3>Recommendations</h3>
+{% if recommendation.lime_required %}
+    <p>Lime Required: {{ recommendation.lime_required }} tons/acre</p>
+{% endif %}
+{% if recommendation.nitrogen_needed %}
+    <p>Nitrogen Needed: {{ recommendation.nitrogen_needed }} kg/acre</p>
+{% endif %}
+{% if recommendation.phosphorus_needed %}
+    <p>Phosphorus Needed: {{ recommendation.phosphorus_needed }} kg/acre</p>
+{% endif %}
+{% if recommendation.potassium_needed %}
+    <p>Potassium Needed: {{ recommendation.potassium_needed }} kg/acre</p>
+{% endif %}
+{% if recommendation.organic_matter_suggestion %}
+    <p>{{ recommendation.organic_matter_suggestion }}</p>
+{% endif %}

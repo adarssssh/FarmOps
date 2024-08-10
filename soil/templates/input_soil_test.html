@@ -1,0 +1,18 @@
+<!-- templates/input_soil_test.html -->
+
+<form method="post">
+    {% csrf_token %}
+    <label for="ph">pH:</label>
+    <input type="text" name="ph"><br>
+    <label for="nitrogen">Nitrogen:</label>
+    <input type="text" name="nitrogen"><br>
+    <label for="phosphorus">Phosphorus:</label>
+    <input type="text" name="phosphorus"><br>
+    <label for="potassium">Potassium:</label>
+    <input type="text" name="potassium"><br>
+    <label for="organic_matter">Organic Matter:</label>
+    <input type="text" name="organic_matter"><br>
+    <label for="soil_type">Soil Type:</label>
+    <input type="text" name="soil_type"><br>
+    <input type="submit" value="Submit">
+</form>
